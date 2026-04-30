@@ -1,0 +1,258 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/car.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Dark overlay */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Cards container */
+/* Dashboard container */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Glass dashboard cards */
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+/* Blue (Total Slots) */
+.blue {
+    border: 1px solid rgba(0,150,255,0.6);
+    box-shadow: 0 0 20px rgba(0,150,255,0.4);
+}
+
+/* Green (Available) */
+.green {
+    border: 1px solid rgba(0,255,150,0.6);
+    box-shadow: 0 0 20px rgba(0,255,150,0.4);
+    color: #00ffb3;
+}
+
+/* Red (Occupied) */
+.red {
+    border: 1px solid rgba(255,80,80,0.6);
+    box-shadow: 0 0 20px rgba(255,80,80,0.4);
+    color: #ff5c5c;
+}
+
+/* Card text */
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Big numbers */
+.card p {
+    font-size: 48px;
+    margin-top: 20px;
+}
+
+/* Main box */
+.container {
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    background: linear-gradient(135deg, #1f6feb, #0d47a1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0d47a1, #1f6feb);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tabs button {
+    flex: 1;
+    margin: 2px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Hide all sections */
+.tab-content {
+    display: none;
+}
+
+/* Active section */
+.tab-content.active {
+    display: block;
+}
+
+
+
+
+.slot-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px;
+    gap: 20px;
+}
+
+/* Glass card slot */
+.slot {
+    width: 130px;
+    height: 110px;
+    border-radius: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.slot:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Available (neon green) */
+.available {
+    border: 1px solid rgba(0,255,150,0.6);
+    color: #00ffb3;
+}
+
+/* Occupied (soft red) */
+.occupied {
+    border: 1px solid rgba(255,80,80,0.6);
+    color: #ff5c5c;
+}
+
+/* Slot text */
+.slot h3 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.slot p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.receipt-box {
+    width: 420px;
+    margin: 40px auto;
+
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+    padding: 25px;
+
+    color: white;
+    text-align: left;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.receipt-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-box p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.bill {
+    color: #00ffb3;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
